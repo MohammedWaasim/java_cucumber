@@ -29,8 +29,19 @@ public class InvestSteps {
 	@Given("^I launch beta version of model-portfolio$")
 	public void i_launch_beta_version_of_model_portfolio() throws Throwable {
 		// Write code here that turns the phrase above into concrete actions
-		System.setProperty("webdriver.chrome.driver",
-				"C:\\driver\\chromedriver.exe");
+		System.out.println("------------os-------------");
+		String ostype=System.getProperty("os.name");
+		System.out.println(ostype);
+		switch (ostype) {
+			    case "Windows": 
+					System.setProperty("webdriver.chrome.driver",
+					"C:\\driver\\chromedriver.exe");
+			    break;
+			    case "Mac OS X": 
+				System.setProperty("webdriver.chrome.driver",
+				"/Users/mohammedwaasim/Documents/workspace_python/drivers/chromedriver");
+			    break;
+		}
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);

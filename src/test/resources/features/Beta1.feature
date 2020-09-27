@@ -17,12 +17,10 @@
 ## (Comments)
 #Sample Feature Definition Template
 @tag
-Feature: WeInvest Interview Question
+Feature: Investment Test
   I want to use this template for my feature file
 
- 
-
-  @WeInvest_Scenario
+  @Invest_Test_Scenario
   Scenario: To verify SPDR under Portfolio is 50 percent
   Given I launch beta version of model-portfolio
   And I navigate to Explore Portfolio screen

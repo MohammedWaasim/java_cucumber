@@ -6,12 +6,12 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features= "src\\test\\resources\\features\\Beta1.feature",
+		features= "src/test/resources/features/Beta1.feature",
 		glue = "StepDefinations",
 		plugin = {"pretty", "html:target/cucumber-reports", "json:target/cucumber.json", 
 				"rerun:target/rerun.txt", "junit:target/cucumber.xml"
 				
-		}, tags = "@WeInvest_Scenario"
+		}, tags = "@Invest_Test_Scenario"
 		
 		)
 
